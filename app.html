@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青少年心理狀態追蹤</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #6a1b9a;
+        }
+        .mood-rating {
+            margin: 10px 0;
+        }
+        .mood-rating input[type="radio"] {
+            margin-right: 5px;
+        }
+        .mood-rating label {
+            font-size: 1.2rem;
+        }
+        .textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #6a1b9a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #4a148c;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>青少年心理狀態追蹤</h1>
+    <p>幫助你了解並改善情緒狀態</p>
+</header>
+
+<main>
+    <section class="section">
+        <h2>今天你的情緒如何?</h2>
+        <div class="mood-rating">
+            <label>心情： </label>
+            <input type="radio" name="mood" value="很好" id="mood-happy">
+            <label for="mood-happy">很好</label>
+            <input type="radio" name="mood" value="還不錯" id="mood-ok">
+            <label for="mood-ok">還不錯</label>
+            <input type="radio" name="mood" value="有點低落" id="mood-sad">
+            <label for="mood-sad">有點低落</label>
+            <input type="radio" name="mood" value="非常沮喪" id="mood-very-sad">
+            <label for="mood-very-sad">非常沮喪</label>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>心理日誌</h2>
+        <textarea class="textarea" placeholder="寫下今天的心情或遇到的挑戰..."></textarea>
+    </section>
+
+    <section class="section">
+        <h2>建議</h2>
+        <p>根據你的心情，這裡有一些建議：</p>
+        <ul id="suggestions">
+            <li>如果你感到焦慮，試試深呼吸或冥想來放鬆心情。</li>
+            <li>若有壓力，可以嘗試運動或和朋友談談心情。</li>
+            <li>保持健康的作息，對情緒有很大幫助。</li>
+        </ul>
+    </section>
+
+    <button onclick="submitData()">提交心情</button>
+</main>
+
+<script>
+    function submitData() {
+        let mood = document.querySelector('input[name="mood"]:checked');
+        let journal = document.querySelector('.textarea').value;
+        
+        if (!mood) {
+            alert('請選擇今天的心情！');
+            return;
+        }
+        
+        alert('感謝你的分享！\n你選擇的心情: ' + mood.value + '\n心理日誌: ' + journal);
+        
+        // 在這裡可以擴展，例如將數據提交到伺服器或儲存在本地
+        document.querySelector('input[name="mood"]:checked').checked = false;
+        document.querySelector('.textarea').value = '';
+    }
+</script>
+
+</body>
+</html>
