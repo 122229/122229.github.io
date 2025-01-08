@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>減肥產品 App</title>
+  <style>
+    /* 基本設置 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4CAF50;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2em;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+
+    nav ul li a:hover {
+      color: #ff9900;
+    }
+
+    /* 主要內容區 */
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta-button {
+      background-color: #ff9900;
+      color: white;
+      padding: 15px 40px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 25px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #ff6600;
+      transform: translateY(-4px);
+    }
+
+    .product, .review {
+      display: inline-block;
+      width: 45%;
+      margin: 15px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .product img, .review img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .product h3, .review h3 {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .product p, .review p {
+      color: #666;
+      margin: 10px 0;
+    }
+
+    .price {
+      font-size: 1.3em;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    .footer {
+      background-color: #333;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #ff9900;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    /* 響應式設計 */
+    @media screen and (max-width: 768px) {
+      .product, .review {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>減肥產品創新專案 App</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">首頁</a></li>
+      <li><a href="#products">產品</a></li>
+      <li><a href="#reviews">顧客評價</a></li>
+      <li><a href="#plan">健身計劃</a></li>
+      <li><a href="#cart">購物車</a></li>
+      <li><a href="#contact">聯絡我們</a></li>
+    </ul>
+  </nav>
+
+  <!-- 首頁區域 -->
+  <section id="home" class="section">
+    <h2>健康生活從這開始</h2>
+    <p>使用我們的創新減肥產品，輕鬆達到您的理想體態。</p>
+    <a href="#products" class="cta-button">立即選擇產品</a>
+  </section>
+
+  <!-- 產品展示區 -->
+  <section id="products" class="section">
+    <h2>推薦產品</h2>
+    <div class="product">
+      <img src="product1.jpg" alt="減肥產品1">
+      <h3>燃脂減重精華</h3>
+      <p>促進脂肪燃燒，提升新陳代謝，幫助減重。</p>
+      <p class="price">NT$1,299</p>
+      <a href="#cart" class="cta-button">加入購物車</a>
+    </div>
+    <div class="product">
+      <img src="product2.jpg" alt="減肥產品2">
+      <h3>消水腫精華</h3>
+      <p>幫助排毒，消除水腫，保持身體清爽。</p>
+      <p class="price">NT$1,499</p>
+      <a href="#cart" class="cta-button">加入購物車</a>
+    </div>
+  </section>
+
+  <!-- 顧客評價區 -->
+  <section id="reviews" class="section">
+    <h2>顧客評價</h2>
+    <div class="review">
+      <img src="reviewer1.jpg" alt="顧客1">
+      <h3>張小姐</h3>
+      <p>"這款產品幫助我成功減重，效果非常明顯！"</p>
+    </div>
+    <div class="review">
+      <img src="reviewer2.jpg" alt="顧客2">
+      <h3>王先生</h3>
+      <p>"產品非常有效，這是我使用過的最好的減肥產品！"</p>
+    </div>
+  </section>
+
+  <!-- 健身計劃區 -->
+  <section id="plan" class="section">
+    <h2>健身與飲食計劃</h2>
+    <p>根據您的需求，制定個性化的健身計劃和飲食建議。</p>
+    <a href="#contact" class="cta-button">立即開始計劃</a>
+  </section>
+
+  <!-- 購物車區 -->
+  <section id="cart" class="section">
+    <h2>您的購物車</h2>
+    <p>您還沒有添加任何產品。</p>
+    <a href="#products" class="cta-button">繼續選購</a>
+  </section>
+
+  <!-- 聯絡我們區 -->
+  <section id="contact" class="section">
+    <h2>聯絡我們</h2>
+    <p>如果有任何問題，請隨時聯繫我們。</p>
+    <a href="mailto:contact@fitness.com" class="cta-button">發送電子郵件</a>
+  </section>
+
+  <!-- 頁腳 -->
+  <footer class="footer">
+    <p>&copy; 2025 減肥品牌 | 版權所有</p>
+    <a href="https://facebook.com" target="_blank">Facebook</a> |
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+  </footer>
+
+</body>
+</html>
